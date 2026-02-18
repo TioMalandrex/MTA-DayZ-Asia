@@ -1,15 +1,17 @@
-#MTA-DayZ-Asia Gamemode
+# MTA-DayZ-Asia Gamemode
 
-Hi guys! Releasing this gamemode based on Marwin & Rivor's, I have been actively working on this gamemode for a year o so and did some fixes and added some new features. Since I'm no longer active in developing this gamemode, I hope to have it shared and developed further by other people :) Enjoy!
+Olá pessoal! Estou lançando este gamemode baseado no trabalho de Marwin & Rivor's. Trabalhei ativamente neste gamemode por cerca de um ano, fazendo correções e adicionando novos recursos. Como não estou mais ativo no desenvolvimento deste gamemode, espero que ele seja compartilhado e desenvolvido ainda mais por outras pessoas :) Aproveitem!
 
+## Guia de Instalação
 
-Installation Guide.
+### Método Rápido
 
-Copy the entire folder and paste into resource folder.
-Copy ACL and MTAserver to deathmatch folder and your Done!
+Copie toda a pasta e cole na pasta de resources.
+Copie o ACL e MTAserver para a pasta deathmatch e pronto!
 
-Alternatively. 
-You can add this to your ACL if you wish to use your own ACL
+### Método Alternativo
+
+Você pode adicionar isto ao seu ACL se desejar usar seu próprio ACL
      
     <object name="resource.webadmin"></object>
     <object name="resource.admin"></object>
@@ -21,7 +23,7 @@ You can add this to your ACL if you wish to use your own ACL
     <object name="resource.asia_group"></object>
     <object name="user.2ndofIcarus"></object>1
 
-Create a group in your ACL for staff, this is used for adding staff skin and previledge in your admin access. 
+Crie um grupo no seu ACL para a staff, isso é usado para adicionar skin de staff e privilégios no acesso administrativo. 
 
     <group name="Staff">
     <acl name="Staff"></acl>
@@ -29,7 +31,7 @@ Create a group in your ACL for staff, this is used for adding staff skin and pre
     <object name="user.NameHere"></object>
     </group>
 
-You also need to add them using your own mtaserver config.
+Você também precisa adicioná-los usando sua própria configuração do mtaserver.
 
     <resource src="admin" startup="1" protected="0" />
     <resource src="defaultstats" startup="1" protected="0" />
@@ -62,4 +64,4 @@ You also need to add them using your own mtaserver config.
     <resource src="asia_attach" startup="1" protected="0" />
     <resource src="asia_compass" startup="1" protected="0" />
     
-And you're all set.
+E está tudo pronto!
