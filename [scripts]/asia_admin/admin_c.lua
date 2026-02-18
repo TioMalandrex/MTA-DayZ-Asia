@@ -26,9 +26,9 @@ function main()
 		for i,player in ipairs(players) do
 			if getElementData(player,"dutyMode") then
 				-- shadow
-				dxDrawTextOnElement(player,"Duty Mode",0.4,20,0,0,0,255,1.42,"sans")
+				dxDrawTextOnElement(player,"Modo Serviço",0.4,20,0,0,0,255,1.42,"sans")
 				-- text
-				dxDrawTextOnElement(player,"Duty Mode",0.41,20,255,255,255,255,1.4,"sans")
+				dxDrawTextOnElement(player,"Modo Serviço",0.41,20,255,255,255,255,1.4,"sans")
 	  		end
   		end
 	end
