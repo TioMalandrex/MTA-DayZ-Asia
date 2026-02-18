@@ -13,7 +13,7 @@ end
 function drawAntirelogTimer ()
 if isTimer ( going_timer ) and getElementData ( localPlayer, "antiRelogWork" ) then
 dxDrawText ( "Anti-Combat Log: "..going_time, 0, ys-ys/4, xs, ys, tocolor ( 136, 8, 8 ), 1.01, "default-bold", "center", "top" )
-dxDrawText ( "Do not leave the server!", 0, ys-ys/4+15, xs, ys, tocolor ( 136, 8, 8 ), 1.01, "default-bold", "center", "top" )
+dxDrawText ( "Não saia do servidor!", 0, ys-ys/4+15, xs, ys, tocolor ( 136, 8, 8 ), 1.01, "default-bold", "center", "top" )
 end
 end
 

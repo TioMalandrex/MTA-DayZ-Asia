@@ -221,7 +221,7 @@ function attemptGrabStart()
 
 						if count >= helicopterOffsets[getElementModel(target.vehicle)].limit then
 							if showChatMessages then
-								return outputChatBox("Heligrab: That helicopter can't take any more weight!", chatColour[1], chatColour[2], chatColour[3])
+								return outputChatBox("Heligrab: Este helicóptero não pode suportar mais peso!", chatColour[1], chatColour[2], chatColour[3])
 							end
 						end
 

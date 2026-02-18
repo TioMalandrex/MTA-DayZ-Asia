@@ -102,35 +102,35 @@ local shop_items = {
 	["normal"] = {
 		["supply"] = {
 			-- example: {"itemdata",amount,price};
-			["Weapons"] = {
+			["Armas"] = {
 				{"weapon11",1,50},
 				{"weapon21",1,20},
 				{"weapon23",1,15},
 				{"weapon20",1,30},
 			},
-			["Ammo"] = {
+			["Munição"] = {
 				{"mag5",20,12},
 				{"mag1",15,12},
 				{"mag3",30,12},
 			},
-			["Food"] = {
+			["Comida"] = {
 				{"fooditem4",1,10},
 				{"fooditem5",1,10},
 				{"fooditem1",1,10},
 			},
-			["Parts"] = {
+			["Peças"] = {
 				{"vehiclepart1",1,25},
 				{"vehiclepart2",1,25},
 				{"vehiclepart3",1,25},
 				{"vehiclepart4",1,25},
 				{"vehiclepart5",1,25}
 			},
-			["Backpacks"] = {
+			["Mochilas"] = {
 				{"backpack4",1,15},
 				{"backpack3",1,25},
 				{"backpack2",1,35},
 			},
-			["Toolbelts"] = {
+			["Cintos de Ferramentas"] = {
 				{"toolbelt4",1,10},
 			},
 			--["Convert"] = {
@@ -138,7 +138,7 @@ local shop_items = {
 			--},
 		},
 		["vehicle"] = {
-			["Vehicles"] = {
+			["Veículos"] = {
 				-- example: {"name",id,engine,rotor,tires,tankparts,scrap,slots,fuel,price}
 				{"Armored Truck",528,1,0,4,1,1,50,80,500},
 				{"HMMWV",470,1,0,4,1,1,46,100,100},
@@ -173,8 +173,8 @@ function load_shop()
 						setElementFrozen(supplyDealer,true)
 						setPedVoice(supplyDealer, "PED_TYPE_DISABLED")
 						addEventHandler("onClientRender",root,function()
-							dxDrawTextOnElement(supplyDealer,"supply dealer",0.25,10,0,0,0,255,1.02,"sans")
-							dxDrawTextOnElement(supplyDealer,"supply dealer",0.26,10,0,200,100,255,1,"sans")
+							dxDrawTextOnElement(supplyDealer,"lojista de suprimentos",0.25,10,0,0,0,255,1.02,"sans")
+							dxDrawTextOnElement(supplyDealer,"lojista de suprimentos",0.26,10,0,200,100,255,1,"sans")
 						end)
 					elseif (i == "vehicle_dealer") then
 						local vehicleDealer = createPed(28,v[1],v[2],v[3],v[4],false)
@@ -183,8 +183,8 @@ function load_shop()
 						setPedVoice(vehicleDealer, "PED_TYPE_DISABLED")
 						setElementFrozen(vehicleDealer,true)
 						addEventHandler("onClientRender",root,function()
-							dxDrawTextOnElement(vehicleDealer,"vehicle dealer",0.25,10,0,0,0,255,1.02,"sans")
-							dxDrawTextOnElement(vehicleDealer,"vehicle dealer",0.26,10,0,200,100,255,1,"sans")
+							dxDrawTextOnElement(vehicleDealer,"lojista de veículos",0.25,10,0,0,0,255,1.02,"sans")
+							dxDrawTextOnElement(vehicleDealer,"lojista de veículos",0.26,10,0,200,100,255,1,"sans")
 						end)
 					elseif (i == "supply_dealer_marker") then
 						local supplyShopMarker = createMarker(v[1],v[2],v[3]-2,"cylinder",1.3,0,255,0,0)
@@ -282,7 +282,7 @@ function buyItem()
 	end
 
 	if (guiGridListGetSelectedItem(shop_gui.gridlist[2] ) == -1) then
-		guiSetText(shop_gui.label[4],"Please select an item")
+		guiSetText(shop_gui.label[4],"Por favor, selecione um item")
 		guiLabelSetColor (shop_gui.label[4],255,0,0)
 	else
 		if (shop_marker_type == "supply") then
@@ -292,11 +292,11 @@ function buyItem()
 			guiLabelSetColor(shop_gui.label[4],255,0,0)
 
 			if (getPlayerMoney(source) >= price) then
-				guiSetText(shop_gui.label[4],"You successfully bought "..item..".")
+				guiSetText(shop_gui.label[4],"Você comprou "..item.." com sucesso.")
 				guiLabelSetColor (shop_gui.label[4],0,149,14,255)
 				triggerServerEvent("DayZPH:onClientSuccessBuysItem",localPlayer,target,itemdata,getPlayerMoney(source),amount,price)
 			else
-				guiSetText(shop_gui.label[4],"You don't have enough money (PHP) to buy utilities")
+				guiSetText(shop_gui.label[4],"Você não tem dinheiro suficiente para comprar utilitários")
 			end
 		elseif (shop_marker_type == "vehicle") then
 			local target = localPlayer;
@@ -306,16 +306,16 @@ function buyItem()
 			guiLabelSetColor(shop_gui.label[4],255,0,0)
 			if (getPlayerMoney(source) >= price) then
 				for i,v in ipairs(getElementsWithinColShape(vehicle_spawn_position_col[shop_marker],"vehicle")) do
-					guiSetText(shop_gui.label[4],"Vehicle spawn area is taken, clear it before buying vehicle.")
+					guiSetText(shop_gui.label[4],"A área de spawn do veículo está ocupada, limpe antes de comprar o veículo.")
 					return
 				end
 				guiSetVisible(shop_gui.window[1],false)
 				showCursor(false)
-				outputChatBox("#880808[DayZ PH]#D3D3D3 You successfully bought "..vehicleName..".",0,0,0,true)
+				outputChatBox("#880808[DayZ PH]#D3D3D3 Você comprou "..vehicleName.." com sucesso.",0,0,0,true)
 				triggerServerEvent("DayZPH:onClientSuccessBuysVehicle",localPlayer,target,getPlayerMoney(source),price,x,y,z,rx,ry,rz,id,engine,rotor,tires,tankparts,scrap,slots,fuel)
 				setRadioChannel(0);
 			else
-				guiSetText(shop_gui.label[4], "You don't have enough money (PHP) to buy a car")
+				guiSetText(shop_gui.label[4], "Você não tem dinheiro suficiente para comprar um carro")
 			end
 		end
 	end
@@ -353,30 +353,30 @@ end)
 
 addEventHandler("onClientResourceStart",resourceRoot,function()
 	local screenW, screenH = guiGetScreenSize()
-	shop_gui.window[1] = guiCreateWindow((screenW - 481) / 2, (screenH - 245) / 2, 551, 245, "Shop", false)
+	shop_gui.window[1] = guiCreateWindow((screenW - 481) / 2, (screenH - 245) / 2, 551, 245, "Loja", false)
 	guiWindowSetSizable(shop_gui.window[1], false)
 	guiSetVisible(shop_gui.window[1],false)
 	guiSetProperty(shop_gui.window[1],"AlwaysOnTop","True");
 
 	shop_gui.tabpanel[1] = guiCreateTabPanel(10, 26, 380, 231, false, shop_gui.window[1])
 
-	shop_gui.tab[1] = guiCreateTab("Buy", shop_gui.tabpanel[1])
+	shop_gui.tab[1] = guiCreateTab("Comprar", shop_gui.tabpanel[1])
 
 	shop_gui.gridlist[1] = guiCreateGridList(5, 5, 102, 176, false, shop_gui.tab[1])
-	guiGridListAddColumn(shop_gui.gridlist[1], "Category", 0.8)
+	guiGridListAddColumn(shop_gui.gridlist[1], "Categoria", 0.8)
 	guiSetProperty(shop_gui.gridlist[1],"SortSettingEnabled","False")
 	shop_gui.gridlist[2] = guiCreateGridList(107, 5, 267, 176, false, shop_gui.tab[1])
 	guiGridListAddColumn(shop_gui.gridlist[2], "", 0.5)
-	guiGridListAddColumn(shop_gui.gridlist[2], "Price", 0.4)
+	guiGridListAddColumn(shop_gui.gridlist[2], "Preço", 0.4)
 	guiSetProperty(shop_gui.gridlist[2],"SortSettingEnabled","False")
 
 	shop_gui.gridlist[3] = guiCreateGridList(395, 48, 146, 188, false, shop_gui.window[1])
 
-	shop_gui.button[1] = guiCreateButton(4, 152, 100, 32, "BUY", false, shop_gui.gridlist[3])
+	shop_gui.button[1] = guiCreateButton(4, 152, 100, 32, "COMPRAR", false, shop_gui.gridlist[3])
 	shop_gui.button[2] = guiCreateButton(104, 152, 38, 32, "X", false, shop_gui.gridlist[3])
 	--shop_gui.label[1] = guiCreateLabel(10, 131, 130, 15, " Pesos (PHP): 0", false, shop_gui.gridlist[3])
 
-	shop_gui.memo[1] = guiCreateMemo(10, 10, 126, 118, "Dealer: Welcome to DayZ Philippines Black Market! Be careful here because people can kill you in this area.", false, shop_gui.gridlist[3])
+	shop_gui.memo[1] = guiCreateMemo(10, 10, 126, 118, "Vendedor: Bem-vindo ao Mercado Negro DayZ! Tome cuidado aqui porque as pessoas podem te matar nesta área.", false, shop_gui.gridlist[3])
 	guiSetProperty(shop_gui.memo[1], "Disabled", "True") 
 	guiSetAlpha(shop_gui.memo[1],0.7)
 
@@ -391,7 +391,7 @@ addEventHandler("onClientResourceStart",resourceRoot,function()
 		guiGridListClear(shop_gui.gridlist[1])
 		guiGridListClear(shop_gui.gridlist[2])
 		if (shop_marker_type == "supply") then
-			guiSetText(shop_gui.window[1],"Supply Shop")
+			guiSetText(shop_gui.window[1],"Loja de Suprimentos")
 			guiGridListSetColumnTitle(shop_gui.gridlist[2],1,"Item")
 
 			-- loads categories
@@ -431,8 +431,8 @@ addEventHandler("onClientResourceStart",resourceRoot,function()
 			end
 			addEventHandler("onClientGUIClick",shop_gui.gridlist[1],updateItems,false) 
 		elseif (shop_marker_type == "vehicle") then
-			guiSetText(shop_gui.window[1],"Vehicle Shop")
-			guiGridListSetColumnTitle(shop_gui.gridlist[2],1,"Vehicle")
+			guiSetText(shop_gui.window[1],"Loja de Veículos")
+			guiGridListSetColumnTitle(shop_gui.gridlist[2],1,"Veículo")
 
 			-- loads categories
 			for i,v in pairs(shop_items) do

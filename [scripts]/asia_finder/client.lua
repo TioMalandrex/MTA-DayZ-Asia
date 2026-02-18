@@ -11,15 +11,15 @@ local w =
 -- // Window creation code --
 addEventHandler("onClientResourceStart", resourceRoot,
 function()
-	w.main = guiCreateWindow((screenW - 564) / 2, (screenH - 349) / 2, 564, 349, "Vehicle & Tend Finder", false)
+	w.main = guiCreateWindow((screenW - 564) / 2, (screenH - 349) / 2, 564, 349, "Localizador de Veículos e Tendas", false)
 	guiWindowSetSizable(w.main, false)
 	guiSetAlpha(w.main, 0.77)
 
 	w.gridList.main = guiCreateGridList(10, 26, 544, 313, false, w.main)
-	w.gridList.column1 = guiGridListAddColumn( w.gridList.main, "Name", 0.25 )
-	w.gridList.column2 = guiGridListAddColumn( w.gridList.main, "Coordinates X", 0.25 )
-	w.gridList.column3 = guiGridListAddColumn( w.gridList.main, "Coordinates Y", 0.25 )
-	w.gridList.column4 = guiGridListAddColumn( w.gridList.main, "Coordinates Z", 0.25 )
+	w.gridList.column1 = guiGridListAddColumn( w.gridList.main, "Nome", 0.25 )
+	w.gridList.column2 = guiGridListAddColumn( w.gridList.main, "Coordenadas X", 0.25 )
+	w.gridList.column3 = guiGridListAddColumn( w.gridList.main, "Coordenadas Y", 0.25 )
+	w.gridList.column4 = guiGridListAddColumn( w.gridList.main, "Coordenadas Z", 0.25 )
 	guiWindowSetMovable(w.main, false)
 	guiSetVisible(w.main, false)
 

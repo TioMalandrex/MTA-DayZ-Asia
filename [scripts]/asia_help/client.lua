@@ -1,22 +1,22 @@
 
         local screenW, screenH = guiGetScreenSize()
-        helpwindow = guiCreateWindow((screenW - 746) / 2, (screenH - 441) / 2, 746, 441, "Help Panel", false)
+        helpwindow = guiCreateWindow((screenW - 746) / 2, (screenH - 441) / 2, 746, 441, "Painel de Ajuda", false)
         guiWindowSetSizable(helpwindow, false)
         guiSetVisible(helpwindow, false)
 
         helpmemo = guiCreateMemo(205, 30, 531, 401, 
-        "Main Commands\n- F1 - Help Panel\n- F2 - Settings Panel\n- F6 - Group Panel\n- T - Local Chat\n- Y - Team Chat\n- U - Global Chat\n- X - Glue to vehicles\n- Shift - Secure yourself to helicopters when in proximity.\n- Backspace - Release yourself from the helicopter.\n\nAnimation Commands\n- L - Prone\n- , - Sit\n- . - Raise Hands\n- ; - Shout - Friendly\n\nConsole Commands\n- /give playerName Amount (gives player money) - Example /give MischiefPlayer2 900\n- /kill - Take suicide or Kill yourself.\n- /report - Report Bugs/Players/Suggestions.\n- /grab - Secure yourself to helicopters when in proximity.\n- /drop - Release yourself from the helicopter."
+        "Comandos Principais\n- F1 - Painel de Ajuda\n- F2 - Painel de Configurações\n- F6 - Painel de Grupo\n- T - Chat Local\n- Y - Chat de Equipe\n- U - Chat Global\n- X - Colar em veículos\n- Shift - Segurar-se em helicópteros quando próximo.\n- Backspace - Soltar-se do helicóptero.\n\nComandos de Animação\n- L - Deitar\n- , - Sentar\n- . - Levantar Mãos\n- ; - Gritar - Amigável\n\nComandos de Console\n- /give nomeJogador Quantia (dar dinheiro ao jogador) - Exemplo /give MischiefPlayer2 900\n- /kill - Suicidar-se ou matar-se.\n- /report - Reportar Bugs/Jogadores/Sugestões.\n- /grab - Segurar-se em helicópteros quando próximo.\n- /drop - Soltar-se do helicóptero."
         , false, helpwindow)
         guiMemoSetReadOnly(helpmemo, true)
 
 
-        rulesbtn = guiCreateButton(9, 30, 186, 38, "Rules", false, helpwindow)
+        rulesbtn = guiCreateButton(9, 30, 186, 38, "Regras", false, helpwindow)
         guiSetProperty(rulesbtn, "NormalTextColour", "FFAAAAAA")
-        commandsbtn = guiCreateButton(9, 78, 186, 38, "Commands", false, helpwindow)
+        commandsbtn = guiCreateButton(9, 78, 186, 38, "Comandos", false, helpwindow)
         guiSetProperty(commandsbtn, "NormalTextColour", "FFAAAAAA")
-        infbtn = guiCreateButton(9, 126, 186, 38, "Information", false, helpwindow)
+        infbtn = guiCreateButton(9, 126, 186, 38, "Informações", false, helpwindow)
         guiSetProperty(infbtn, "NormalTextColour", "FFAAAAAA")
-        staffbtn = guiCreateButton(9, 174, 186, 38, "Admins Roster", false, helpwindow)
+        staffbtn = guiCreateButton(9, 174, 186, 38, "Lista de Admins", false, helpwindow)
         guiSetProperty(staffbtn, "NormalTextColour", "FFAAAAAA")    
 
 
