@@ -1,7 +1,7 @@
 function teamsystem_gui()
 
 	local screenW, screenH = guiGetScreenSize()
-	createTeamWindow = guiCreateWindow((screenW - 366) / 2, (screenH - 242) / 2, 366, 242, "Group System Panel" , false)
+	createTeamWindow = guiCreateWindow((screenW - 366) / 2, (screenH - 242) / 2, 366, 242, "Painel do Sistema de Grupo" , false)
 	guiWindowSetMovable(createTeamWindow, false)
 	guiWindowSetSizable(createTeamWindow, false)
 	guiSetVisible(createTeamWindow,false)
@@ -10,32 +10,32 @@ function teamsystem_gui()
 
 	createTeamGridlist = guiCreateTabPanel(10, 28, 346, 204, false, createTeamWindow)
 
-	createTeamTabCreateTeam = guiCreateTab("Create Team", createTeamGridlist)
+	createTeamTabCreateTeam = guiCreateTab("Criar Grupo", createTeamGridlist)
 
 	bgCREATION = guiCreateGridList(53, 43, 233, 62, false, createTeamTabCreateTeam)
 
-	buttonCreateTeam = guiCreateButton(127, 21, 96, 31, "Create Team", false, bgCREATION)
+	buttonCreateTeam = guiCreateButton(127, 21, 96, 31, "Criar Grupo", false, bgCREATION)
 	editboxTeamName = guiCreateEdit(10, 21, 112, 31, "", false, bgCREATION)
-	labelName = guiCreateLabel(20, 6, 92, 16, "Name:", false, bgCREATION)
+	labelName = guiCreateLabel(20, 6, 92, 16, "Nome:", false, bgCREATION)
 
-	labelTeamCost = guiCreateLabel(63, 105, 213, 18, "Creating team will cost you 100 PHP", false, createTeamTabCreateTeam)
+	labelTeamCost = guiCreateLabel(63, 105, 213, 18, "Criar grupo custará 100 PHP", false, createTeamTabCreateTeam)
 	guiLabelSetHorizontalAlign(labelTeamCost, "center", false)
 	guiLabelSetVerticalAlign(labelTeamCost, "center")
 
-	createTeamTabInvites = guiCreateTab("Invites", createTeamGridlist)
+	createTeamTabInvites = guiCreateTab("Convites", createTeamGridlist)
 
-	buttonAcceptInvite = guiCreateButton(20, 143, 93, 26, "Accept", false, createTeamTabInvites)
+	buttonAcceptInvite = guiCreateButton(20, 143, 93, 26, "Aceitar", false, createTeamTabInvites)
 	inviteListGridlist = guiCreateGridList(10, 10, 326, 128, false, createTeamTabInvites)
-	guiGridListAddColumn(inviteListGridlist, "Teams", 0.9)
+	guiGridListAddColumn(inviteListGridlist, "Grupos", 0.9)
 	guiSetProperty(inviteListGridlist, "SortSettingEnabled", "False")
-	buttonDeclineInvite = guiCreateButton(118, 143, 93, 26, "Decline", false, createTeamTabInvites)
+	buttonDeclineInvite = guiCreateButton(118, 143, 93, 26, "Recusar", false, createTeamTabInvites)
 
 
 
 
 
 	local screenW, screenH = guiGetScreenSize()
-	teamWindow = guiCreateWindow((screenW - 465) / 2, (screenH - 335) / 2, 465, 335, "DayZ PH - Group System", false)
+	teamWindow = guiCreateWindow((screenW - 465) / 2, (screenH - 335) / 2, 465, 335, "DayZ PH - Sistema de Grupo", false)
 	guiWindowSetMovable(teamWindow, false)
 	guiWindowSetSizable(teamWindow, false)
 	guiSetVisible(teamWindow, false)
@@ -46,20 +46,20 @@ function teamsystem_gui()
 
 	tabpanel = guiCreateTabPanel(10, 28, 445, 297, false, teamWindow)
 
-	tabpanelManageTeam = guiCreateTab("Manage Group", tabpanel)
+	tabpanelManageTeam = guiCreateTab("Gerenciar Grupo", tabpanel)
 
 	teamGridlist = guiCreateGridList(7, 8, 251, 257, false, tabpanelManageTeam)
 	guiGridListSetSortingEnabled (teamGridlist, false)
-	guiGridListAddColumn(teamGridlist, "Player", 0.57)
-	guiGridListAddColumn(teamGridlist, "Rank", 0.31)
-	buttonPromote = guiCreateButton(266.5, 8, 167, 29, "Change Member's Rank", false, tabpanelManageTeam)
-	buttonKick = guiCreateButton(266.5, 43, 167, 29, "Kick Member", false, tabpanelManageTeam)
-	buttonDisband = guiCreateButton(266.5, 78, 167, 29, "Disband Team", false, tabpanelManageTeam)
-	buttonLeave = guiCreateButton(266.5, 113, 167, 29, "Leave", false, tabpanelManageTeam)
+	guiGridListAddColumn(teamGridlist, "Jogador", 0.57)
+	guiGridListAddColumn(teamGridlist, "Cargo", 0.31)
+	buttonPromote = guiCreateButton(266.5, 8, 167, 29, "Mudar Cargo do Membro", false, tabpanelManageTeam)
+	buttonKick = guiCreateButton(266.5, 43, 167, 29, "Expulsar Membro", false, tabpanelManageTeam)
+	buttonDisband = guiCreateButton(266.5, 78, 167, 29, "Dissolver Grupo", false, tabpanelManageTeam)
+	buttonLeave = guiCreateButton(266.5, 113, 167, 29, "Sair", false, tabpanelManageTeam)
 
-	buttonInvitePanel = guiCreateButton(166, 225, 75, 22, "Invite", false, teamGridlist)
+	buttonInvitePanel = guiCreateButton(166, 225, 75, 22, "Convidar", false, teamGridlist)
 
-	promoteWindow = guiCreateWindow((screenW - 135) / 2, (screenH - 157) / 2, 135, 157, "Change Rank", false)
+	promoteWindow = guiCreateWindow((screenW - 135) / 2, (screenH - 157) / 2, 135, 157, "Mudar Cargo", false)
 	guiWindowSetMovable(promoteWindow, false)
 	guiWindowSetSizable(promoteWindow, false)
 	guiSetProperty(promoteWindow, "AlwaysOnTop", "True")
@@ -68,7 +68,7 @@ function teamsystem_gui()
 	guiSetProperty(promoteWindow,"AlwaysOnTop","True");
 
 	promoteGridlist = guiCreateGridList(9, 24, 117, 94, false, promoteWindow)
-	guiGridListAddColumn(promoteGridlist, "Ranks", 0.8)
+	guiGridListAddColumn(promoteGridlist, "Cargos", 0.8)
 	for i = 1, 3 do
 	    guiGridListAddRow(promoteGridlist)
 	end
@@ -76,10 +76,10 @@ function teamsystem_gui()
 	guiGridListSetItemText(promoteGridlist, 1, 1, "set_trusted", false, false)
 	guiGridListSetItemText(promoteGridlist, 2, 1, "set_officer", false, false)
 	guiSetProperty(promoteGridlist, "SortSettingEnabled", "False")
-	buttonWindowPromote = guiCreateButton(10, 118, 84, 29, "CHANGE", false, promoteWindow)
+	buttonWindowPromote = guiCreateButton(10, 118, 84, 29, "MUDAR", false, promoteWindow)
 	buttonWindowPromoteClose = guiCreateButton(94, 118, 32, 29, "X", false, promoteWindow)    
 
-	invitePanel = guiCreateWindow((screenW - 272) / 2, (screenH - 259) / 2, 272, 259, "Invite Panel", false)
+	invitePanel = guiCreateWindow((screenW - 272) / 2, (screenH - 259) / 2, 272, 259, "Painel de Convites", false)
 	guiSetVisible(invitePanel,false)
 	guiWindowSetMovable(invitePanel, false)
 	guiWindowSetSizable(invitePanel, false)
@@ -87,12 +87,12 @@ function teamsystem_gui()
 
 	teamInviteGridlist = guiCreateGridList(10, 27, 252, 193, false, invitePanel)
 	guiGridListSetSortingEnabled (teamInviteGridlist, false)
-	guiGridListAddColumn(teamInviteGridlist, "Player", 0.57)
-	guiGridListAddColumn(teamInviteGridlist, "Invited", 0.31)
-	buttonInvite = guiCreateButton(10, 224, 170, 25, "Send/Revoke Invitation", false, invitePanel)
-	buttonInviteClose = guiCreateButton(186, 224, 76, 25, "close", false, invitePanel)
+	guiGridListAddColumn(teamInviteGridlist, "Jogador", 0.57)
+	guiGridListAddColumn(teamInviteGridlist, "Convidado", 0.31)
+	buttonInvite = guiCreateButton(10, 224, 170, 25, "Enviar/Revogar Convite", false, invitePanel)
+	buttonInviteClose = guiCreateButton(186, 224, 76, 25, "fechar", false, invitePanel)
 
-	confirmActionWindow = guiCreateWindow((screenW - 148) / 2, (screenH - 90) / 2, 148, 90, "Confirm Action", false)
+	confirmActionWindow = guiCreateWindow((screenW - 148) / 2, (screenH - 90) / 2, 148, 90, "Confirmar Ação", false)
 	guiWindowSetMovable(confirmActionWindow, false)
 	guiWindowSetSizable(confirmActionWindow, false)
 	guiSetProperty(confirmActionWindow, "AlwaysOnTop", "True")
@@ -100,28 +100,28 @@ function teamsystem_gui()
 
 	guiSetProperty(confirmActionWindow,"AlwaysOnTop","True");
 
-	labelConfirmAction = guiCreateLabel(10, 20, 128, 33, "Are you sure?", false, confirmActionWindow)
+	labelConfirmAction = guiCreateLabel(10, 20, 128, 33, "Tem certeza?", false, confirmActionWindow)
 	guiLabelSetHorizontalAlign(labelConfirmAction, "center", false)
 	guiLabelSetVerticalAlign(labelConfirmAction, "center")
-	buttionConfirmActionYes = guiCreateButton(10, 53, 62, 27, "Yes", false, confirmActionWindow)
-	buttonConfirmActionNo = guiCreateButton(76, 53, 62, 27, "No", false, confirmActionWindow)    
+	buttionConfirmActionYes = guiCreateButton(10, 53, 62, 27, "Sim", false, confirmActionWindow)
+	buttonConfirmActionNo = guiCreateButton(76, 53, 62, 27, "Não", false, confirmActionWindow)    
 
-	tabpanelInvite = guiCreateTab("All Teams", tabpanel)
+	tabpanelInvite = guiCreateTab("Todos os Grupos", tabpanel)
 
 	allTeamList = guiCreateGridList(7, 8, 430, 257, false, tabpanelInvite)
 	guiGridListSetSortingEnabled (allTeamList, false)
-	guiGridListAddColumn(allTeamList, "Team", 0.4)
-	guiGridListAddColumn(allTeamList, "Leader", 0.35)
-	guiGridListAddColumn(allTeamList, "Slots", 0.15)
+	guiGridListAddColumn(allTeamList, "Grupo", 0.4)
+	guiGridListAddColumn(allTeamList, "Líder", 0.35)
+	guiGridListAddColumn(allTeamList, "Vagas", 0.15)
 
-	tabpanelHelp = guiCreateTab("Help", tabpanel)
+	tabpanelHelp = guiCreateTab("Ajuda", tabpanel)
 
-	helpText = guiCreateMemo(7, 8, 430, 257, "Here you can create team and invite your friends in it to play and fight together. :) \n\nTo chat in team chat press 'Y' or '/teamchat text' \n\nRank 'Member' can only talk in team chat and leave team. \n\nRank 'Trusted' or higher is for members who will be able to access your base with /open or /close if you have one, but if you don't have one you can purchase it by contacting owner. \n\nRank 'Officer' can kick and invite people to team.", false, tabpanelHelp)
+	helpText = guiCreateMemo(7, 8, 430, 257, "Aqui você pode criar um grupo e convidar seus amigos para jogar e lutar juntos. :) \n\nPara conversar no chat do grupo pressione 'Y' ou '/teamchat texto' \n\nCargo 'Membro' só pode falar no chat do grupo e sair do grupo. \n\nCargo 'Confiável' ou superior é para membros que poderão acessar sua base com /open ou /close se você tiver uma, mas se não tiver, pode comprá-la entrando em contato com o proprietário. \n\nCargo 'Oficial' pode expulsar e convidar pessoas para o grupo.", false, tabpanelHelp)
 	guiSetProperty(helpText,"Disabled","True")
 
-	labelTeam = guiCreateLabel(268, 243, 167, 15, "Team: N/A", false, tabpanelManageTeam)
-	labelLeader = guiCreateLabel(268, 224, 167, 15, "Leader: N/A", false, tabpanelManageTeam)
-	labelRank = guiCreateLabel(268, 205, 167, 15, "Rank: N/A", false, tabpanelManageTeam)
+	labelTeam = guiCreateLabel(268, 243, 167, 15, "Grupo: N/A", false, tabpanelManageTeam)
+	labelLeader = guiCreateLabel(268, 224, 167, 15, "Líder: N/A", false, tabpanelManageTeam)
+	labelRank = guiCreateLabel(268, 205, 167, 15, "Cargo: N/A", false, tabpanelManageTeam)
 
 	--baseTab = guiCreateTab("Base", tabpanel)
 end
