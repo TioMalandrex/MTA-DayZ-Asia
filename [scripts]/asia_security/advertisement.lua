@@ -65,7 +65,7 @@ addEventHandler("onPlayerPrivateMessage", root, function(msg)
 		outputServerLog( "PRIVATE-ADVERT: " .. getPlayerName(source) .. ": " .. msg )
 		if not isPlayerExcluded(source) then
 			cancelEvent()
-			outputChatBox("#880808[Warning!] #D3D3D3Promoting or engaging in advertising is strictly prohibited, and continued violation may lead to a ban.", source, 211, 211, 211,true)
+			outputChatBox("#880808[Aviso!] #D3D3D3Promover ou se envolver em propaganda é estritamente proibido, e violações contínuas podem levar a um banimento.", source, 211, 211, 211,true)
 		end
 	end
 end)
