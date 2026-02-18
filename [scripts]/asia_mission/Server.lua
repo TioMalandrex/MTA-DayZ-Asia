@@ -81,7 +81,7 @@ addEventHandler("onMarkerHit",root,
 				setElementData(atBag,"num",data)
 				exports.dayzepoch:attachElementToBone(atBag,player,12,0,0.05,0.27,0,180,0)
 				bli = createBlipAttachedTo(player,23)
-				outputChatBox("#880808" .. getPlayerName(player) .. "#D3D3D3 has taken the zombie infection cure",root,255,255,255,true)
+				outputChatBox("#880808" .. getPlayerName(player) .. "#D3D3D3 pegou a cura da infecção zumbi",root,255,255,255,true)
 				marker = createMarker(mark[data][1],mark[data][2],mark[data][3],"cylinder",1.5,255,255,0,10,player)
 				marBli = createBlipAttachedTo(marker,53,2,255,0,0,255,0,99999.0,player)
 			end
@@ -124,7 +124,7 @@ addEventHandler("onMarkerHit",root,
 				destroyElement(marBli)
 				destroyElement(bli)
 				destroyElement(atBag)
-				outputChatBox("#880808" .. getPlayerName(player) .. "#D3D3D3 has delivered the cure and got #88080850 #D3D3D3PHP",root,255,0,0,true)
+				outputChatBox("#880808" .. getPlayerName(player) .. "#D3D3D3 entregou a cura e recebeu #88080850 #D3D3D3PHP",root,255,0,0,true)
 				givePlayerMoney(player,50)
 				setTimer(createBag,30000,1)
 			end

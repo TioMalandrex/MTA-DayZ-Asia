@@ -132,13 +132,13 @@ radarrent = {button = {},window = {},label = {}}
 local screenW, screenH = guiGetScreenSize()
 
 radarRentMarker = createMarker (modelX-7.5596, modelY+.022, modelZ-1.019, "cylinder", 1.5, 255, 255, 0, 40 )
-radarrent.window[1] = guiCreateWindow((screenW - 134) / 2, (screenH - 114) / 2, 134, 114, "Radar Rent", false)
+radarrent.window[1] = guiCreateWindow((screenW - 134) / 2, (screenH - 114) / 2, 134, 114, "Aluguel de Radar", false)
 guiSetVisible ( radarrent.window[1], false )
 guiWindowSetMovable(radarrent.window[1], false)
 guiWindowSetSizable(radarrent.window[1], false)
 
-radarrent.button[1] = guiCreateButton(9, 73, 90, 32, "Pay 50 PHP", false, radarrent.window[1])
-radarrent.label[1] = guiCreateLabel(10, 27, 115, 45, "Pay 50 PHP to\nextend radars life\nfor 10 more minutes.", false, radarrent.window[1])
+radarrent.button[1] = guiCreateButton(9, 73, 90, 32, "Pagar 50 PHP", false, radarrent.window[1])
+radarrent.label[1] = guiCreateLabel(10, 27, 115, 45, "Pague 50 PHP para\nestender a vida do radar\npor mais 10 minutos.", false, radarrent.window[1])
 radarrent.button[2] = guiCreateButton(99, 73, 26, 32, "X", false, radarrent.window[1])
 
 
