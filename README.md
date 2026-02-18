@@ -288,6 +288,66 @@ MTA-DayZ-Asia/
 - **Reparos**: 5 componentes (pneus, motor, peças, sucata, rotor)
 - **Loot**: Slots de armazenamento (8-50 por veículo)
 
+### Sistema de Bases e Armazenamento
+
+O gamemode possui dois tipos de bases: **pré-construídas** e **construíveis pelos jogadores**.
+
+#### 🏕️ Bases Construíveis (Sistema de Storage)
+
+Os jogadores podem construir suas próprias estruturas de armazenamento no mundo:
+
+**Tendas (Tents)**:
+- **Como obter**: Encontre o item "Tent" no loot
+- **Como usar**: Abra o inventário (N), selecione a tenda e clique em "Pitch a tent"
+- **Capacidade**: 100 slots de armazenamento
+- **Funcionalidade**: Armazena itens, armas, munição
+- **Acesso**: Qualquer jogador pode acessar (pressione J perto da tenda)
+- **Remoção**: Apenas quem construiu pode remover
+- **Persistência**: Salva automaticamente no banco de dados
+
+**Cofres (Safes)**:
+- **Como obter**: Encontre o item "Safe" no loot
+- **Como usar**: Abra o inventário (N), selecione o cofre e crie um código PIN de 4 dígitos
+- **Capacidade**: 50 slots de armazenamento
+- **Segurança**: Protegido por código PIN pessoal
+- **Acesso**: Apenas quem sabe o código pode acessar
+- **Mudar código**: Opção disponível após abrir o cofre
+- **Invadir**: Pode ser explodido com C4 (item raro)
+- **Status "Raided"**: Após ser explodido, fica acessível por todos
+- **Persistência**: Salva automaticamente com o código do proprietário
+
+**Dicas de Uso**:
+- 💡 Tendas são boas para armazenamento temporário e compartilhado
+- 🔒 Cofres são ideais para itens valiosos (requerem código)
+- 📍 Construa em locais escondidos para evitar roubos
+- 💾 Faça backup regularmente (comando admin: `/dobackup`)
+
+#### 🏰 Bases Pré-Construídas (Map Resources)
+
+O servidor inclui 3 bases pré-construídas que podem ser ativadas:
+
+**Base1, Base2, Base3**:
+- **Tipo**: Recursos de mapa (.map files)
+- **Conteúdo**: Estruturas completas com muros, portões, prédios
+- **Localização**: Coordenadas específicas no mapa de San Andreas
+- **Ativação**: Iniciar o resource via console (`start Base1`)
+- **Uso**: Áreas pré-construídas para clãs ou eventos
+- **Personalização**: Pode ser editado com Map Editor do MTA
+
+**Como ativar uma base pré-construída**:
+```bash
+# No console do servidor
+start Base1
+# ou
+start Base2
+# ou
+start Base3
+```
+
+**Diferenças**:
+- Bases pré-construídas: Estruturas fixas no mapa (não construíveis por jogadores)
+- Bases construíveis: Tendas e cofres que jogadores criam durante o jogo
+
 ### Sistemas Auxiliares (22 no total)
 
 | Sistema | Descrição |
