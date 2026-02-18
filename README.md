@@ -26,7 +26,8 @@ Baseado no trabalho de Marwin & Rivor's, com melhorias e novos recursos adiciona
 - **Inventário Avançado**: Mochilas (12-72 slots), armas, munição, equipamentos
 - **Armas**: 11 primárias, 11 secundárias com sistema de munição realista
 - **Persistência**: Contas salvas com estatísticas e progresso completo
-- **Bases Construíveis**: 3 templates de bases para proteção e armazenamento
+- **Sistema de Armazenamento**: Tendas (100 slots) e Cofres com código PIN (50 slots)
+- **Bases Pré-Construídas**: 3 templates de bases completas para clãs e eventos
 - **22 Sistemas Auxiliares**: Loja, missões, GPS, radar, grupos, admin e mais
 - **Administração Completa**: Painel de admin, anti-cheat e ferramentas de moderação
 
@@ -222,7 +223,7 @@ MTA-DayZ-Asia/
 │   ├── asia_modloader/     # Carregador de mods 3D
 │   ├── asia_security/      # Anti-cheat
 │   └── ... (mais 14 sistemas)
-├── [Bases]/                # Bases construíveis
+├── [Bases]/                # Bases pré-construídas
 │   ├── Base1/              # Template de base pequena
 │   ├── Base2/              # Template de base média
 │   └── Base3/              # Template de base grande
@@ -288,13 +289,13 @@ MTA-DayZ-Asia/
 - **Reparos**: 5 componentes (pneus, motor, peças, sucata, rotor)
 - **Loot**: Slots de armazenamento (8-50 por veículo)
 
-### Sistema de Bases e Armazenamento
+### Sistema de Armazenamento
 
-O gamemode possui dois tipos de bases: **pré-construídas** e **construíveis pelos jogadores**.
+O gamemode oferece diferentes opções de armazenamento para os jogadores guardarem seus itens com segurança.
 
-#### 🏕️ Bases Construíveis (Sistema de Storage)
+#### 📦 Modos de Armazenamento (Construíveis)
 
-Os jogadores podem construir suas próprias estruturas de armazenamento no mundo:
+Os jogadores podem criar suas próprias estruturas de armazenamento no mundo:
 
 **Tendas (Tents)**:
 - **Como obter**: Encontre o item "Tent" no loot
@@ -322,9 +323,13 @@ Os jogadores podem construir suas próprias estruturas de armazenamento no mundo
 - 📍 Construa em locais escondidos para evitar roubos
 - 💾 Faça backup regularmente (comando admin: `/dobackup`)
 
-#### 🏰 Bases Pré-Construídas (Map Resources)
+---
 
-O servidor inclui 3 bases pré-construídas que podem ser ativadas:
+## 🏰 Bases
+
+### Bases Pré-Construídas (Map Resources)
+
+O servidor inclui 3 bases completas que podem ser ativadas pelos administradores:
 
 **Base1, Base2, Base3**:
 - **Tipo**: Recursos de mapa (.map files)
@@ -344,9 +349,7 @@ start Base2
 start Base3
 ```
 
-**Diferenças**:
-- Bases pré-construídas: Estruturas fixas no mapa (não construíveis por jogadores)
-- Bases construíveis: Tendas e cofres que jogadores criam durante o jogo
+**Nota**: As bases pré-construídas são estruturas fixas no mapa, diferentes dos sistemas de armazenamento (tendas e cofres) que os jogadores podem criar durante o jogo.
 
 ### Sistemas Auxiliares (22 no total)
 
