@@ -34,47 +34,103 @@ Baseado no trabalho de Marwin & Rivor's, com melhorias e novos recursos adiciona
 
 ## 🚀 Instalação
 
-### Requisitos
+### Requisitos Mínimos
 
-**Servidor**:
-- MTA:SA Server 1.5.8+
-- Linux (Ubuntu 18.04+, Debian 9+) ou Windows Server 2012+
-- 2 GB RAM (mínimo), 4 GB (recomendado)
-- MySQL/MariaDB para persistência de dados
-- Portas: 22003 (UDP) e 22005 (TCP) abertas
+- **MTA:SA Server 1.5.8+** ([Download](https://multitheftauto.com/))
+- **Windows 7+** ou Linux (Ubuntu 18.04+)
+- **2 GB RAM** (recomendado 4 GB)
+- **GTA San Andreas** instalado (para testar como cliente)
 
-**Cliente**:
-- MTA:SA Client 1.5.8+
-- GTA San Andreas instalado
+### 📦 Instalação Rápida - Windows
 
-### Método Rápido
+1. **Baixe o MTA:SA Server**
+   - Acesse: https://multitheftauto.com/
+   - Baixe a versão para Windows
+   - Instale em uma pasta (ex: `C:\MTA-Server\`)
 
-1. **Clone ou baixe o repositório**:
+2. **Baixe este gamemode**
+   - Clique no botão verde "Code" → "Download ZIP"
+   - Extraia o ZIP baixado
+
+3. **Copie os arquivos**
+   - Copie **todas as pastas** `[DayZ]`, `[scripts]`, `[Bases]`, `[admin]` para:
+     ```
+     C:\MTA-Server\mods\deathmatch\resources\
+     ```
+   - Copie o arquivo `acl.xml` para:
+     ```
+     C:\MTA-Server\mods\deathmatch\
+     ```
+   - Copie o arquivo `mtaserver.conf` para:
+     ```
+     C:\MTA-Server\mods\deathmatch\
+     ```
+
+4. **Inicie o servidor**
+   - Execute `MTA Server.exe` na pasta do MTA Server
+   - Pronto! O servidor iniciará automaticamente
+
+5. **Conecte-se**
+   - Abra o MTA:SA Client
+   - Vá em "Browse Servers" 
+   - Conecte em `127.0.0.1` (localhost)
+
+### 🐧 Instalação Rápida - Linux
+
+1. **Baixe e instale o MTA Server**:
+```bash
+wget https://linux.mtasa.com/dl/multitheftauto_linux_x64.tar.gz
+tar -xzf multitheftauto_linux_x64.tar.gz
+```
+
+2. **Baixe este gamemode**:
 ```bash
 git clone https://github.com/TioMalandrex/MTA-DayZ-Asia.git
+cd MTA-DayZ-Asia
 ```
 
-2. **Copie para o servidor**:
+3. **Copie os arquivos**:
 ```bash
-cp -r MTA-DayZ-Asia/* /caminho/para/mta-server/mods/deathmatch/resources/
-```
-
-3. **Copie os arquivos de configuração**:
-```bash
-cp MTA-DayZ-Asia/acl.xml /caminho/para/mta-server/mods/deathmatch/
-cp MTA-DayZ-Asia/mtaserver.conf /caminho/para/mta-server/mods/deathmatch/
+cp -r [DayZ] [scripts] [Bases] [admin] /caminho/para/mta-server/mods/deathmatch/resources/
+cp acl.xml mtaserver.conf /caminho/para/mta-server/mods/deathmatch/
 ```
 
 4. **Inicie o servidor**:
 ```bash
 cd /caminho/para/mta-server
-./mta-server64  # Linux
-# ou MTA Server.exe no Windows
+./mta-server64
 ```
 
-### Configuração do ACL
+---
 
-Adicione ao seu `acl.xml`:
+## ⚙️ Configuração Adicional (Opcional)
+
+> **Nota**: Se você copiou os arquivos `acl.xml` e `mtaserver.conf` fornecidos no repositório, não precisa fazer mais nada! Esses arquivos já estão configurados e prontos para uso.
+
+### Adicionar Administradores
+
+Se quiser adicionar seu usuário como administrador, edite o arquivo `acl.xml`:
+
+**Localize a seção Staff e adicione seu nome:**
+```xml
+<group name="Staff">
+    <acl name="Staff"></acl>
+    <object name="user.SeuNomeAqui"></object>  <!-- Troque por seu nome no MTA -->
+</group>
+```
+
+### Personalizar Configurações do Servidor
+
+Edite o arquivo `mtaserver.conf` para personalizar:
+
+```xml
+<servername>MTA DayZ Epoch - Seu Servidor</servername>  <!-- Nome do servidor -->
+<maxplayers>64</maxplayers>                              <!-- Máximo de jogadores -->
+<password></password>                                     <!-- Senha (deixe vazio para público) -->
+```
+
+<details>
+<summary>📋 Clique para ver configuração completa do ACL</summary>
 
 ```xml
 <!-- Recursos principais -->
@@ -103,10 +159,10 @@ Adicione ao seu `acl.xml`:
     <right name="command.warp" access="true"></right>
 </acl>
 ```
+</details>
 
-### Configuração do mtaserver.conf
-
-Adicione estes recursos ao `mtaserver.conf`:
+<details>
+<summary>📋 Clique para ver lista de recursos do mtaserver.conf</summary>
 
 ```xml
 <!-- Admin Resources -->
@@ -144,8 +200,9 @@ Adicione estes recursos ao `mtaserver.conf`:
 <resource src="asia_attach" startup="1" protected="0" />
 <resource src="asia_compass" startup="1" protected="0" />
 ```
+</details>
 
-E está tudo pronto!
+**Pronto!** Seu servidor DayZ está configurado e funcionando! 🎮
 
 ---
 
@@ -347,52 +404,56 @@ ban [jogador]        # Bane jogador
 
 ## 🔧 Troubleshooting
 
-### Servidor não inicia
+### ❌ Servidor não inicia
 
-**Problema**: Porta em uso
+**Windows:**
+- Verifique se o firewall está bloqueando o `MTA Server.exe`
+- Libere as portas 22003 e 22005 no firewall do Windows
+- Execute como Administrador se necessário
+
+**Linux:**
 ```bash
-# Verificar porta
+# Verificar porta em uso
 netstat -tuln | grep 22003
 
 # Matar processo
 kill -9 $(lsof -ti:22003)
 ```
 
-### Recursos não carregam
+### ❌ Recursos não carregam
 
-**Problema**: Permissões incorretas
-```bash
-# Linux
-chmod -R 755 /opt/mta-server/mods/deathmatch/resources/
+**Solução:**
+- Verifique se todas as pastas foram copiadas corretamente
+- Certifique-se que os arquivos `acl.xml` e `mtaserver.conf` foram copiados
+- Verifique o arquivo `logs/server.log` na pasta do servidor para erros
 
-# Verificar logs
-tail -f logs/server.log
-```
+### ❌ Não consigo conectar ao servidor
 
-### Admin panel não abre
+**Solução:**
+1. Verifique se o servidor está rodando (janela do MTA Server aberta)
+2. Use o IP `127.0.0.1` se estiver testando localmente
+3. Verifique se o firewall não está bloqueando a conexão
+4. Certifique-se que o MTA Client está atualizado (1.5.8+)
 
-**Problema**: ACL não configurado
+### ❌ Admin panel não abre (tecla P)
 
-1. Verifique se seu usuário está no grupo "Admin" ou "Staff" no `acl.xml`
-2. Reinicie o servidor após modificar ACL
+**Solução:**
+- Adicione seu nome de usuário no arquivo `acl.xml` na seção Staff
+- Reinicie o servidor após modificar o ACL
+- Certifique-se de estar logado no servidor
+### ❌ Servidor com lag ou FPS baixo
 
-### Database não conecta
+**Solução:**
+- Edite `mtaserver.conf` e ajuste: `<fpslimit>36</fpslimit>`
+- Reduza o número de zumbis em `[DayZ]/dayzepoch/zombies_s.lua`
+- Aumente a RAM dedicada ao servidor
 
-**Problema**: MySQL não rodando
-```bash
-# Verificar status
-sudo systemctl status mysql
+### 💡 Dicas Importantes
 
-# Iniciar
-sudo systemctl start mysql
-```
-
-### Alto lag/FPS baixo
-
-**Soluções**:
-1. Ajuste FPS limit em `mtaserver.conf`: `<fpslimit>36</fpslimit>`
-2. Reduza zumbis em `zombies_s.lua`: `local maxZombies = 30`
-3. Ajuste slots de loot
+- **Logs**: Sempre verifique `mods/deathmatch/logs/server.log` para erros
+- **Backup**: Faça backup dos arquivos de configuração antes de editar
+- **Portas**: As portas padrão são 22003 (UDP) e 22005 (TCP)
+- **Suporte**: Reporte bugs ou peça ajuda nas Issues do GitHub
 
 ---
 
