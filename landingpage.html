@@ -75,13 +75,13 @@
         bases pré-construídas, clãs, missões, loja, segurança anti-cheat e dezenas de recursos auxiliares.
       </p>
       <div class="cta">
-        <a class="btn" href="./README.md">Ver documentação completa</a>
-        <a class="btn alt" href="./mtaserver.conf">Configuração do servidor</a>
+        <a class="btn" href="#sistemas">Ver sistemas</a>
+        <a class="btn alt" href="#comandos">Ver comandos</a>
       </div>
     </div>
   </header>
 
-  <section>
+  <section id="sistemas">
     <div class="container">
       <h2>Sistemas principais</h2>
       <div class="grid">
@@ -95,7 +95,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="comandos">
     <div class="container">
       <h2>Comandos populares</h2>
       <table>
@@ -121,7 +121,7 @@
         <li>asia_radar</li><li>asia_worldmap</li><li>asia_finder</li><li>asia_attach</li><li>asia_help</li>
         <li>asia_dynamicsky</li><li>asia_particles</li><li>asia_lightsoff</li><li>asia_animation</li><li>e_map</li>
       </ul>
-      <p><strong>Servidor:</strong> MTA DayZ : Philippines | Asia | Classic | Zombie Survival | PVP | and more! · <strong>Porta:</strong> 22003 · <strong>Slots:</strong> 200</p>
+      <p><strong>Servidor:</strong> <span id="server-name"></span> · <strong>Porta:</strong> <span id="server-port"></span> · <strong>Slots:</strong> <span id="server-slots"></span></p>
     </div>
   </section>
 
@@ -130,5 +130,15 @@
       Landing page promocional criada com informações do próprio repositório e ativos internos do projeto.
     </div>
   </footer>
+  <script>
+    const serverConfig = {
+      name: "MTA DayZ : Philippines | Asia | Classic | Zombie Survival | PVP | and more!",
+      port: "22003",
+      slots: "200"
+    };
+    document.getElementById("server-name").textContent = serverConfig.name;
+    document.getElementById("server-port").textContent = serverConfig.port;
+    document.getElementById("server-slots").textContent = serverConfig.slots;
+  </script>
 </body>
 </html>
