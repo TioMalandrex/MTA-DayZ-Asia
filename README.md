@@ -468,7 +468,7 @@ ban [jogador]        # Bane jogador
 
 ## 🌐 Landing Page
 
-- Arquivo pronto para divulgação: `landingpage.html`
+- Arquivo pronto para divulgação: `web/landingpage.html`
 - Abra no navegador para visualizar a página de apresentação do servidor com os principais sistemas, comandos e módulos auxiliares.
 
 ---
