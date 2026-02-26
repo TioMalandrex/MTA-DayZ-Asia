@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MTA DayZ Asia | Landing Page</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0c0f14;
+      color: #e7ecf3;
+      line-height: 1.5;
+    }
+    .hero {
+      min-height: 52vh;
+      padding: 56px 20px;
+      background:
+        linear-gradient(120deg, rgba(5, 8, 13, 0.85), rgba(5, 8, 13, 0.55)),
+        url('./[scripts]/asia_gps/img/world.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+    }
+    .container { width: min(1100px, 100%); margin: 0 auto; }
+    h1 { margin: 0 0 10px; font-size: clamp(1.8rem, 3vw, 3rem); }
+    h2 { margin-top: 0; font-size: 1.5rem; }
+    .tag { display: inline-block; padding: 6px 10px; border-radius: 999px; background: #18304c; font-size: .85rem; }
+    .lead { max-width: 760px; margin: 12px 0 20px; color: #ced9e8; }
+    .cta { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      text-decoration: none;
+      color: #fff;
+      border-radius: 8px;
+      padding: 10px 14px;
+      background: #2f7fd9;
+      font-weight: 700;
+    }
+    .btn.alt { background: #2a3240; }
+    section { padding: 34px 20px; border-top: 1px solid #1c2330; }
+    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .card {
+      background: #121823;
+      border: 1px solid #273142;
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .logo {
+      width: 180px;
+      max-width: 50vw;
+      display: block;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 6px 10px rgba(0,0,0,.35));
+    }
+    table { width: 100%; border-collapse: collapse; background: #121823; border: 1px solid #273142; border-radius: 10px; overflow: hidden; }
+    th, td { text-align: left; padding: 10px; border-bottom: 1px solid #273142; }
+    th { background: #1a2433; }
+    tr:last-child td { border-bottom: none; }
+    .modules { columns: 2; gap: 24px; }
+    .modules li { margin: 0 0 7px; }
+    footer { padding: 24px 20px 40px; color: #9fb2cb; }
+    @media (max-width: 720px) { .modules { columns: 1; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <img class="logo" src="./[scripts]/asia_login/logo.png" alt="MTA DayZ Asia" />
+      <span class="tag">Zombie Survival • PVP • DayZ Epoch</span>
+      <h1>MTA DayZ Asia</h1>
+      <p class="lead">
+        Servidor completo de sobrevivência para MTA:SA com sistema DayZ Epoch, 50 zumbis simultâneos,
+        bases pré-construídas, clãs, missões, loja, segurança anti-cheat e dezenas de recursos auxiliares.
+      </p>
+      <div class="cta">
+        <a class="btn" href="./README.md">Ver documentação completa</a>
+        <a class="btn alt" href="./mtaserver.conf">Configuração do servidor</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>Sistemas principais</h2>
+      <div class="grid">
+        <article class="card"><h3>Sobrevivência</h3><p>Sangue (12.000), fome, sede, temperatura, fraturas e sangramento.</p></article>
+        <article class="card"><h3>Zumbis e Loot</h3><p>Até 50 zumbis ativos, 15 skins e tabela ampla de loot dinâmico.</p></article>
+        <article class="card"><h3>Armas e Equipamentos</h3><p>11 armas primárias, 11 secundárias, munições, capacetes e coletes.</p></article>
+        <article class="card"><h3>Veículos</h3><p>16 modelos com combustível, danos, reparos e armazenamento por veículo.</p></article>
+        <article class="card"><h3>Armazenamento</h3><p>Tendas (100 slots) e cofres com PIN (50 slots) persistentes em banco.</p></article>
+        <article class="card"><h3>Bases</h3><p>Base1, Base2 e Base3 prontas para eventos, clãs e zonas seguras.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Comandos populares</h2>
+      <table>
+        <thead><tr><th>Tipo</th><th>Comando</th><th>Descrição</th></tr></thead>
+        <tbody>
+          <tr><td>Jogador</td><td>/kill</td><td>Suicida e respawn.</td></tr>
+          <tr><td>Jogador</td><td>/globalchat [msg]</td><td>Mensagem global.</td></tr>
+          <tr><td>Jogador</td><td>/teamchat [msg]</td><td>Mensagem para grupo.</td></tr>
+          <tr><td>Admin</td><td>/adminpanel ou /p</td><td>Abre painel administrativo.</td></tr>
+          <tr><td>Admin</td><td>/kick, /ban, /mute</td><td>Moderação de jogadores.</td></tr>
+          <tr><td>Admin</td><td>/weather, /time</td><td>Controle de ambiente.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Sistemas auxiliares e complementares</h2>
+      <ul class="modules">
+        <li>asia_admin</li><li>asia_shop</li><li>asia_mission</li><li>asia_gps</li><li>asia_group</li>
+        <li>asia_login</li><li>asia_modloader</li><li>asia_security</li><li>asia_scoreboard</li><li>asia_shader</li>
+        <li>asia_radar</li><li>asia_worldmap</li><li>asia_finder</li><li>asia_attach</li><li>asia_help</li>
+        <li>asia_dynamicsky</li><li>asia_particles</li><li>asia_lightsoff</li><li>asia_animation</li><li>e_map</li>
+      </ul>
+      <p><strong>Servidor:</strong> MTA DayZ : Philippines | Asia | Classic | Zombie Survival | PVP | and more! · <strong>Porta:</strong> 22003 · <strong>Slots:</strong> 200</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      Landing page promocional criada com informações do próprio repositório e ativos internos do projeto.
+    </div>
+  </footer>
+</body>
+</html>

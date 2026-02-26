@@ -12,6 +12,7 @@ Baseado no trabalho de Marwin & Rivor's, com melhorias e novos recursos adiciona
 - [Sistemas Principais](#sistemas-principais)
 - [Comandos](#comandos)
 - [Atalhos de Teclado](#atalhos-de-teclado)
+- [Landing Page](#-landing-page)
 - [Requisitos](#requisitos)
 - [Troubleshooting](#troubleshooting)
 
@@ -462,6 +463,13 @@ ban [jogador]        # Bane jogador
 **Modo Spectator**:
 - `Seta Esquerda/Direita` - Trocar jogador
 - `Mouse Wheel` - Ajustar câmera
+
+---
+
+## 🌐 Landing Page
+
+- Arquivo pronto para divulgação: `landingpage.html`
+- Abra no navegador para visualizar a página de apresentação do servidor com os principais sistemas, comandos e módulos auxiliares.
 
 ---
 
