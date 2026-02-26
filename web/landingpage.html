@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MTA DayZ Asia | Landing Page</title>
+  <meta name="description" content="Servidor DayZ para MTA:SA com sobrevivência, zumbis, loot, clãs, missões, bases e PvP intenso." />
+  <style>
+    :root {
+      color-scheme: dark;
+      --red: #c8102e;
+      --red2: #ff1a3c;
+      --dark: #080b0f;
+      --dark2: #0f141c;
+      --dark3: #151c26;
+      --line: #273142;
+      --text: #e7ecf3;
+      --text2: #b6c1d1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: 64px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(8, 11, 15, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(200, 16, 46, .35);
+    }
+    .nav-brand {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 1.7rem;
+      letter-spacing: .08em;
+      color: #fff;
+    }
+    .nav-links { display: flex; gap: 18px; }
+    .nav-links a {
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: .85rem;
+      letter-spacing: .08em;
+      color: var(--text2);
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: #fff; }
+    .hero {
+      min-height: 80vh;
+      padding: 112px 20px 56px;
+      background:
+        linear-gradient(180deg, rgba(8,11,15,.55) 0%, rgba(8,11,15,.82) 60%, rgba(8,11,15,1) 100%),
+        url('./assets/world.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+    }
+    .container { width: min(1100px, 100%); margin: 0 auto; }
+    h1 {
+      margin: 0 0 10px;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: clamp(3rem, 10vw, 7rem);
+      line-height: .92;
+      letter-spacing: .04em;
+      text-shadow: 0 0 40px rgba(200,16,46,.4);
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-size: 1.65rem;
+    }
+    .section-tag {
+      color: #ffb6c1;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .8rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .section-desc { color: var(--text2); max-width: 780px; margin-bottom: 12px; }
+    .divider { width: 90px; height: 2px; background: var(--red); margin: 6px 0 18px; }
+    .tag {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid var(--red);
+      border-radius: 4px;
+      background: rgba(200, 16, 46, .12);
+      color: #ffd8de;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 6px;
+    }
+    .lead { max-width: 760px; margin: 12px 0 20px; color: #d6deea; }
+    .cta { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 4px;
+      padding: 10px 14px;
+      background: var(--red);
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, .1);
+    }
+    .btn:hover { background: var(--red2); }
+    .btn.alt { background: rgba(10, 15, 22, .8); }
+    .hero-stats {
+      margin-top: 20px;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      max-width: 700px;
+    }
+    .hero-stats .card {
+      background: rgba(6, 10, 16, .72);
+      border: 1px solid rgba(255, 255, 255, .09);
+      text-align: center;
+      padding: 10px;
+    }
+    .hero-stats strong {
+      display: block;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+    section { padding: 34px 20px; border-top: 1px solid #1c2330; background: var(--dark2); }
+    section:nth-of-type(even) { background: var(--dark3); }
+    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .card {
+      background: #121823;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .logo {
+      width: 180px;
+      max-width: 50vw;
+      display: block;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 6px 10px rgba(0,0,0,.35));
+    }
+    table { width: 100%; border-collapse: collapse; background: #121823; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+    th, td { text-align: left; padding: 10px; border-bottom: 1px solid var(--line); }
+    th {
+      background: rgba(200, 16, 46, .15);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    }
+    tr:last-child td { border-bottom: none; }
+    .modules { columns: 2; gap: 24px; }
+    .modules li { margin: 0 0 7px; }
+    .cta-final {
+      text-align: center;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: linear-gradient(180deg, rgba(200, 16, 46, .15), rgba(10, 15, 22, .95));
+      padding: 24px 16px;
+    }
+    .cta-final p { color: #d7deea; margin-bottom: 14px; }
+    footer { padding: 24px 20px 40px; color: #9fb2cb; background: #090d12; }
+    @media (max-width: 720px) { .modules { columns: 1; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <span class="nav-brand">MTA DAYZ ASIA</span>
+    <div class="nav-links">
+      <a href="#sistemas">Sistemas</a>
+      <a href="#comandos">Como jogar</a>
+      <a href="#modulos">Atividades</a>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="container">
+      <img class="logo" src="./assets/logo.png" alt="MTA DayZ Asia" />
+      <span class="tag">Zombie Survival • PVP • DayZ Epoch</span>
+      <h1>MTA DayZ Asia</h1>
+      <p class="lead">
+        Servidor completo de sobrevivência para MTA:SA com sistema DayZ Epoch, 50 zumbis simultâneos,
+        bases pré-construídas, clãs, missões, loja, segurança anti-cheat e dezenas de recursos auxiliares.
+      </p>
+      <div class="cta">
+        <a class="btn" href="#sistemas">Ver sistemas</a>
+        <a class="btn alt" href="#comandos">Como jogar</a>
+      </div>
+      <div class="hero-stats">
+        <article class="card"><strong>50</strong> Zumbis simultâneos</article>
+        <article class="card"><strong>16</strong> Veículos com sistema completo</article>
+        <article class="card"><strong>200</strong> Slots para sobreviventes</article>
+        <article class="card"><strong>3</strong> Bases prontas para domínio</article>
+      </div>
+    </div>
+  </header>
+
+  <section id="sistemas">
+    <div class="container">
+      <p class="section-tag">Sistemas DayZ</p>
+      <h2>Sistemas principais</h2>
+      <p class="section-desc">No mesmo padrão de divulgação do GangWar: apresentação direta dos recursos principais para jogadores novos e veteranos.</p>
+      <div class="divider"></div>
+      <div class="grid">
+        <article class="card"><h3>Sobrevivência</h3><p>Sangue (12.000), fome, sede, temperatura, fraturas e sangramento.</p></article>
+        <article class="card"><h3>Zumbis e Loot</h3><p>Até 50 zumbis ativos, 15 skins e tabela ampla de loot dinâmico.</p></article>
+        <article class="card"><h3>Armas e Equipamentos</h3><p>11 armas primárias, 11 secundárias, munições, capacetes e coletes.</p></article>
+        <article class="card"><h3>Veículos</h3><p>16 modelos com combustível, danos, reparos e armazenamento por veículo.</p></article>
+        <article class="card"><h3>Armazenamento</h3><p>Tendas (100 slots) e cofres com PIN (50 slots) persistentes em banco.</p></article>
+        <article class="card"><h3>Bases</h3><p>Base1, Base2 e Base3 prontas para eventos, clãs e zonas seguras.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="comandos">
+    <div class="container">
+      <p class="section-tag">Como funciona</p>
+      <h2>Como jogar no DayZ Asia</h2>
+      <p class="section-desc">Entre no mapa, colete recursos, evolua seu equipamento e sobreviva aos confrontos contra zumbis e outros jogadores.</p>
+      <div class="divider"></div>
+      <div class="grid">
+        <article class="card"><h3>1. Spawn e Loot</h3><p>Você nasce no mapa e precisa procurar comida, água, remédios e armas para continuar vivo.</p></article>
+        <article class="card"><h3>2. Gerencie seus status</h3><p>Fome, sede, temperatura e sangramento afetam sua sobrevivência o tempo todo.</p></article>
+        <article class="card"><h3>3. Evolua no combate</h3><p>Enfrente zumbis, dispute áreas e monte sua estratégia de PvP para dominar regiões.</p></article>
+        <article class="card"><h3>4. Proteja seu progresso</h3><p>Use tendas, cofres, veículos e bases para guardar loot e manter sua vantagem.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="modulos">
+    <div class="container">
+      <p class="section-tag">O que fazer</p>
+      <h2>Atividades para players</h2>
+      <p class="section-desc">Tudo foi pensado para gameplay: exploração, progressão de loot, combate e domínio de áreas em ritmo competitivo.</p>
+      <div class="divider"></div>
+      <div class="grid">
+        <article class="card"><h3>Exploração constante</h3><p>Rode cidades, vilas e zonas de risco para encontrar equipamentos raros e recursos essenciais.</p></article>
+        <article class="card"><h3>Missões e objetivos</h3><p>Participe de eventos, cumpra objetivos no mapa e dispute recompensas de alto valor.</p></article>
+        <article class="card"><h3>Conquista de bases</h3><p>Dispute áreas estratégicas com seu grupo para criar domínio territorial e vantagem tática.</p></article>
+        <article class="card"><h3>PvP e sobrevivência</h3><p>Cada decisão importa: recuar, atacar ou proteger seu loot pode definir sua sessão.</p></article>
+      </div>
+      <p><strong>Servidor:</strong> <span id="server-name"></span> · <strong>Porta:</strong> <span id="server-port"></span> · <strong>Slots:</strong> <span id="server-slots"></span></p>
+      <div class="cta-final">
+        <h2>Pronto para sobreviver em DayZ?</h2>
+        <p>Entre no servidor e viva combate, looting, progressão e domínio de bases no padrão competitivo da empresa.</p>
+        <a class="btn" href="#sistemas">Começar agora</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      Landing page promocional criada com informações do próprio repositório e ativos internos do projeto.
+    </div>
+  </footer>
+  <script>
+    const serverConfig = {
+      name: "MTA DayZ : Philippines | Asia | Classic | Zombie Survival | PVP | and more!",
+      port: "22003",
+      slots: "200"
+    };
+    document.getElementById("server-name").textContent = serverConfig.name;
+    document.getElementById("server-port").textContent = serverConfig.port;
+    document.getElementById("server-slots").textContent = serverConfig.slots;
+  </script>
+</body>
+</html>
