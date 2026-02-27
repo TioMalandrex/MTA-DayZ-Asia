@@ -1,65 +1,161 @@
-# MTA DayZ Asia — Prévia Oficial
+# 🧟 MTA DayZ — O Servidor Que Vai Mudar Tudo
 
-O apocalipse chegou em San Andreas, com foco total em sobrevivência e progressão de jogador.
+> **Servidor em desenvolvimento. Em breve disponível para todos.**
 
-## Conteúdo do servidor (foco no gameplay)
+---
 
-### 🚗 Tipos de veículos e modelos presentes
+## 💀 O Que É o MTA DayZ?
 
-- **Aéreos:** Maverick (487) e Police Maverick (497)
-- **Militares/utilitários:** Patriot (470), Barracks (433), FBI Rancher (490), FBI Truck (528)
-- **Civis e carga:** Washington (421), Bobcat (422), Yankee (456), Huntley (579)
-- **Leves:** Sanchez (468), Freeway (463), Quadbike (471), Bike (509), Tractor (531)
-- **Aquáticos:** Dinghy (473)
+Imagine o caos de um apocalipse zumbi dentro do universo de GTA San Andreas — com gráficos melhorados, sistemas reais de sobrevivência e PvP intenso. É isso que estamos construindo.
 
-### 🎒 Mochilas e capacidade
+**MTA DayZ** é um servidor de **Multi Theft Auto (MTA:SA)** inspirado no DayZ original, trazendo uma experiência completa de sobrevivência com sistemas próprios desenvolvidos do zero.
 
-- Leather Sack — **12 slots**
-- Hunting Backpack — **16 slots**
-- Boulder Backpack — **24 slots**
-- Coyote Backpack — **36 slots**
-- Dry Bag — **48 slots**
-- Tortilla Backpack — **63 slots**
-- Field Backpack — **72 slots**
+---
 
-### 🔫 Armas e combate
+## 🌍 Um Mundo Enorme e Vivo
 
-- **Primárias:** VKS, DMR, CZ 550, SVD Dragunov Camo, M24, AKS Gold, AK-107, M4A1 Holo, MK 48 CCO, RPK, SA-58V ACOG, Saiga 12K, Winchester 1866, Besta
-- **Secundárias/melee:** M1911, M9 SD, G17, MP5A5, Micro UZI, Revólver, Faca de Caça, Machadinha, Bastão de Baseball, Pá, Facão
-- **Especiais:** Granada e Binóculos
+- Mapa com **capacidade para até 128 jogadores** simultaneamente
+- **Mundo de 6000×6000 unidades** para explorar
+- **Céu dinâmico realista** com ciclo solar e lunar de 21 fases
+- **Nuvens em tempo real**, horizonte com névoa atmosférica e shaders avançados
+- **Texturas de terreno customizadas** com shaders DirectX que substituem completamente o visual padrão do mapa
 
-### 🎒 Como funciona o inventário
+---
 
-O inventário é dividido em categorias para facilitar o gerenciamento:
-- Arma primária / arma secundária / arma especial
-- Munição
-- Comida e bebida
-- Medicamentos
-- Itens gerais
-- Equipamentos (mochila, capacete, colete)
-- Cinto de ferramentas (mapa, GPS, relógio, caixa de ferramentas, NVG etc.)
+## 🧟 Zumbis Que Dão Medo
 
-Itens têm peso/capacidade e a mochila escolhida define quanto loot você consegue carregar.
+- Até **50 zumbis** ativos ao mesmo tempo, espalhados pelo mapa
+- **15 tipos visuais diferentes** de zumbi
+- Sistema de spawn inteligente por zona e proximidade
+- Cada zumbi pode dropar itens valiosos ao morrer
 
-### 🍗 Sobrevivência (fome/sede/status)
+---
 
-- Sistema de **sede** ativo (água e bebidas fazem diferença real)
-- Alimentação impacta sua sobrevivência junto com o sistema de sangue
-- Status importantes: **sangue, temperatura e humanidade**
-- Itens médicos, bandagens e bolsas de sangue são essenciais para se manter vivo
+## 🎒 Sobrevivência de Verdade
 
-### 🏕️ Bases e áreas
+Cada jogador precisa gerenciar:
 
-- Existem **3 bases pré-construídas** no projeto (Base1, Base2 e Base3)
-- As bases são voltadas para organização de equipe, proteção de loot e disputa territorial
-- O mapa recompensa exploração de diferentes áreas (rotas urbanas, interior, costa e pontos estratégicos)
+| Atributo | O que representa |
+|---|---|
+| 🩸 Blood | Pontos de vida (0 a 12.000) |
+| 🍖 Food | Fome — coma ou morra |
+| 💧 Thirst | Sede — hidrate-se |
+| 🦴 Broken Bones | Ossos quebrados |
+| 🩹 Bleeding | Sangramento ativo |
+| 🥶 Cold | Hipotermia |
+| ⚔️ Humanity | Herói ou Bandido? |
 
-## Para quem é esse servidor?
+Seu histórico de **abates (zumbis, bandidos e jogadores)** é registrado e influencia como outros jogadores te enxergam.
 
-- Quem curte DayZ com progressão real (PvE + PvP)
-- Duos, trios e clãs que querem dominar rotas e território
-- Jogadores que gostam de loot, risco e tomada de decisão no inventário
+---
 
-🚧 **Status atual:** em desenvolvimento ativo com ajustes e balanceamento.
+## 🔫 Arsenal Completo
 
-**MTA DayZ Asia — sobreviva, evolua e domine o mapa.**
+- **28+ tipos de arma** disponíveis
+- **10 tipos de munição** diferentes
+- Sons de armas customizados
+- Sistema de disparo com controle de cadência e recuo
+
+---
+
+## 🚁 Veículos por Todo Lado
+
+- **100+ locais de spawn de veículos** pelo mapa
+- Carros, motos, helicópteros, tanques e muito mais
+- Veículos com **estado persistente**: combustível, peças danificadas, sucata
+
+---
+
+## 💰 Economia e Loja
+
+- **Loja in-game** para comprar itens e veículos com moeda do servidor
+- Veículos compráveis com peças configuráveis (motor, pneus, tanque, rotor)
+- Economia equilibrada para criar disputa real por recursos
+
+---
+
+## 🎯 Missões Dinâmicas
+
+Missões aparecem automaticamente pelo mapa a cada hora:
+
+- 📦 **Caixa de Suprimentos Capturada** — 12 locais no mapa, disputa PvP/PvE por recompensas raras
+- 🚁 **Aquisição de Helicóptero** — 5 pontos de spawn, cada heli com condição de peças aleatória
+
+Cada missão tem **timer de 30 minutos** e premiações com mais de **20 tipos de item**.
+
+---
+
+## 🗺️ GPS e Mapa
+
+- **GPS estilo Arma II** com minimapa em tempo real
+- Rastreamento de aliados da sua gangue no mapa
+- **Mapa interativo avançado** (substitui o F11 padrão) com zoom, pan e marcadores personalizados
+- 64 ícones de blip para sinalizar locais importantes
+
+---
+
+## 👥 Gangues
+
+- Forme sua gangue e rastreie aliados pelo GPS
+- Coordene ataques a missões e loot points
+
+---
+
+## 🏆 Placar em Tempo Real
+
+- Placar visual com **DirectX** (sem lag, sempre fluido)
+- Tema customizável: Marrom, Azul ou Verde
+- Colunas configuráveis com stats dos jogadores em tempo real
+
+---
+
+## 🔐 Sistema de Login Seguro
+
+- Crie sua conta com usuário, e-mail e senha
+- Login persistente com **todos os seus stats salvos**
+- Escolha seu **crosshair personalizado** ao entrar
+
+---
+
+## 🛡️ Servidor Limpo e Estável
+
+- **Anti-glitch integrado**: colisões de mapa bloqueiam exploits de movimento
+- **Sistema de partículas rico** com 85+ efeitos visuais (sangue, explosões, fogo, poeira de heli, fumaça de arma e muito mais)
+- Infraestrutura pensada para **zero lag** mesmo com servidores lotados
+
+---
+
+## ⚙️ Administração Profissional
+
+Nosso painel admin inclui:
+- Kick, ban (1h / 1 dia / 1 semana / permanente) e mute
+- Controle de clima em tempo real
+- Radar de monitoramento de jogadores
+- Teleporte, dar itens, spawnar veículos
+- Visualização de stats de qualquer jogador
+
+---
+
+## 📸 Prévia Visual
+
+> *(screenshots e vídeos serão adicionados conforme o servidor se aproxima do lançamento)*
+
+---
+
+## 📅 Lançamento
+
+> 🚧 **Em desenvolvimento ativo.** Fique ligado para novidades!
+
+---
+
+## 📢 Fique por Dentro
+
+Siga o projeto e seja o primeiro a saber quando o servidor abrir:
+
+- 💬 **Discord:** *(em breve)*
+- 📺 **YouTube:** *(em breve)*
+- 🌐 **Site:** *(em breve)*
+
+---
+
+*Feito com ❤️ para a comunidade MTA.*
