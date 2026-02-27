@@ -7,14 +7,13 @@ Mensagens prontas para copiar e colar no chat, mantendo divulgação direta e de
 🚨 **MTA DayZ Asia — Prévia Oficial**  
 O apocalipse chegou em San Andreas.
 
-Servidor DayZ para MTA:SA com foco em sobrevivência real:
-🧟 zumbis e loot pelo mapa  
-🔫 armas, inventário e equipamentos  
-🚗 veículos com mecânicas de sobrevivência  
-🎯 missões dinâmicas  
-👥 sistema de grupos/clãs  
-🛒 economia e loja  
-🛡️ segurança e anti-cheat
+Servidor DayZ para MTA:SA com foco no jogador:
+🧟 zumbis + loot  
+🔫 armas variadas (VKS, DMR, M4A1, MK48, Saiga, M1911, MP5, Facão, Granada)  
+🎒 mochilas de 12 até 72 slots  
+🚗 veículos aéreos, militares, civis, motos, quad, bike e barco  
+💧 sistema de sede + alimentação + sangue/temperatura  
+🏕️ bases para squad, defesa de loot e disputa territorial
 
 🚧 Em desenvolvimento ativo.  
 Monte seu squad e acompanhe a evolução do projeto.
@@ -29,19 +28,17 @@ O apocalipse chegou em San Andreas. Estamos desenvolvendo um servidor DayZ compl
 
 ✅ O que você encontra:
 • Mundo com zumbis ativos e loot espalhado  
-• Sistema completo de armas e inventário  
-• Veículos com mecânicas de uso/sobrevivência  
-• GPS, mapa, radar e interface customizada  
-• Missões, economia e loja  
-• Grupos/clãs para jogar em equipe  
-• Segurança reforçada e anti-cheat  
-• Visual aprimorado com shaders e partículas
+• Sistema completo de armas (primárias, secundárias e especiais)  
+• Inventário por categorias (arma, munição, comida, medicina, itens, equipamento, toolbelt)  
+• Mochilas com progressão de capacidade: 12, 16, 24, 36, 48, 63 e 72 slots  
+• Veículos por tipo: helicópteros, militares, civis/carga, motos/quads/bike e barco  
+• Sobrevivência com sede, alimentação, sangue, temperatura e humanidade  
+• Bases para estratégia de equipe e domínio de área
 
-🏗️ Estrutura robusta:
-• Core DayZ (`dayzepoch`)  
-• 22 sistemas auxiliares  
-• Ferramentas administrativas completas  
-• Bases pré-construídas para eventos e disputa de território
+📍 Áreas e progressão:
+• 3 bases pré-construídas (Base1, Base2 e Base3)  
+• Rotas por cidade, interior, costa e pontos estratégicos  
+• Escolha de rota e loadout impacta diretamente sua sobrevivência
 
 🚧 Status: em desenvolvimento ativo (ajustes e balanceamento).
 
@@ -58,22 +55,19 @@ Estamos desenvolvendo um servidor DayZ completo para MTA:SA com foco em sobreviv
 
 ✅ **O que esperar**
 • 🧟 Mundo com zumbis ativos e loot espalhado  
-• 🔫 Sistema completo de armas, inventário e equipamentos  
-• 🚗 Veículos com mecânicas de uso e sobrevivência  
-• 🧭 GPS, mapa, radar e interface customizada  
-• 🛒 Economia com loja e progressão  
-• 🎯 Missões e objetivos dinâmicos  
-• 👥 Sistema de grupos/clãs para jogar em equipe  
-• 🛡️ Camada de segurança e anti-cheat  
-• 🌌 Ambiente visual aprimorado (shaders, partículas e clima dinâmico)
+• 🔫 Armas de todos os estilos (sniper, rifle, SMG, shotgun, pistolas, melee e utilitárias)  
+• 🎒 Mochilas com capacidade de 12 a 72 slots  
+• 🚗 Frota variada com helicópteros, veículos militares, civis/carga, motos, quad, bicicleta e barco  
+• 🧰 Inventário dividido por categoria para gestão tática de recursos  
+• 💧 Sistemas de sede/alimentação e status de sangue, temperatura e humanidade  
+• 🏕️ Bases para defesa de loot e disputa territorial em equipe
 
 ### Bloco 2/2
 
-🏗️ **Estrutura do servidor**
-• Core DayZ (`dayzepoch`) para toda a lógica de sobrevivência  
-• 22 sistemas auxiliares para gameplay, interface, segurança e qualidade de vida  
-• Ferramentas administrativas completas para moderação  
-• Bases pré-construídas para eventos e disputas de território
+📍 **Áreas e objetivos**
+• 3 bases pré-construídas no projeto (Base1, Base2 e Base3)  
+• Exploração de áreas urbanas, interior, costa e pontos de alto risco  
+• Controle de rota, recursos e posicionamento define sua progressão
 
 🎯 **Para quem é**
 • Jogadores que curtem sobrevivência intensa (PvE + PvP)  
